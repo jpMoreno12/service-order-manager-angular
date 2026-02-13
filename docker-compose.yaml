@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  angular-app:
+    build: .
+    container_name: servicer-order-manager-dev
+    ports:
+      - "4200:4200"
+
+    volumes:
+      # código do projeto (bind mount)
+      - .:/app
+      
+volumes:
+  node_modules:
